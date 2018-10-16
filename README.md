@@ -2,9 +2,9 @@
 
 this belong to my Software Engineering class where i must design , make diagram of the system , and build it
 <br /><br />
-Warn :<br /><br />
+Warn : stil following tuts<br /><br />
 
-Technology used here
+Technology used here <br />
 1.Main <br />
 -NodeJS <br />
 -MongoDB <br />
