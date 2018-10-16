@@ -23,7 +23,7 @@ new Barang({
 }),
 
 new Barang({
-	imagePath: '../images/lelo.png',
+	imagePath: '../images/can.jpg',
 	judul: 'Ngehe Banget',
 	deskripsi: 'Cepet lelang barang ini',
 	harga: 13
@@ -31,7 +31,7 @@ new Barang({
 }),
 
 new Barang({
-	imagePath: '../images/lelo.png',
+	imagePath: '../images/b.png',
 	judul: 'Banget Barunya',
 	deskripsi: 'lelang sekarang gratis ongkri besok',
 	harga: 19
@@ -39,7 +39,7 @@ new Barang({
 }),
 
 new Barang({
-	imagePath: '../images/lelo.png',
+	imagePath: '../images/nyet.jpg',
 	judul: 'Torrrrrrrrrr',
 	deskripsi: 'LELAAANNNNNGGGGG!!!!',
 	harga: 34
@@ -47,7 +47,7 @@ new Barang({
 }),
 
 new Barang({
-	imagePath: '../images/lelo.png',
+	imagePath: '../images/ngantuk.jpg',
 	judul: 'LPLPPLOLOLOLOL',
 	deskripsi: 'LELAAANNNadsSdasdaDSANNGGGGG!!!!',
 	harga: 50
