@@ -8,8 +8,11 @@ var mongoose = require('mongoose');
 var session =  require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
+var validator = require('express-validator');
+
 
 var indexRouter = require('./routes/index');
+var userRouter = require('./routes/user');
 
 
 var app = express();
@@ -24,6 +27,7 @@ app.set('view engine', '.hbs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(validator());
 app.use(cookieParser());
 app.use(session({secret: 'ngehehe123' , resave : false , saveUninitialized : false}));
 app.use(flash());
@@ -31,6 +35,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req , res , next){
+	res.locals.login = req.isAuthenticated();
+	next();
+});
+
+app.use('/user', userRouter);
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
