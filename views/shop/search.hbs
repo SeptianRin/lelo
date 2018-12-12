@@ -1,0 +1,30 @@
+<p><h2>Keyword anda adalah : {{keyword}}</h2></p>
+{{total}}
+{{# each barangs}}
+  <div class="row">
+    {{# each this}}
+    <a href="/detailproduk/{{this._id}}">
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="{{this.imagePath}}" alt="{{this.judul}}" class="img-responsive">
+      <div class="caption">
+        <h3>{{this.judul}}</h3>
+        <p class="description">{{this.deskripsi}}</p>
+        <p>
+          <div class="clearfix">
+            <div class="harga pull-left" style="align:center;">Tertinggi : $ {{this.harga}}</div>
+          </div></p>
+      </div>
+<!--      <form action="/bidding/{{product._id}}" method="post">
+          <div class="form-row">
+              <label>Lelang</label> <br>
+              <input type="number" name="lelang" min='0' oninput="validity.valid||(value='');" class="form-group"> <br>
+          <button class="btn btn-success">Bid</button>
+      </form>
+-->
+    </div>
+  </div>
+  </a>
+  {{/each}}
+  </div>
+{{/each}}

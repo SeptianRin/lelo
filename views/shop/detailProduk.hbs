@@ -1,0 +1,83 @@
+<div class="row">
+	<!-- showing info about product detail-->
+	<div id="success" class="alert alert-success " {{#if noMessages}}hidden{{/if}}>
+      {{successMsg}}
+    </div>
+	<div class="col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2">
+		<img src="{{product.imagePath}}" alt="{{product.judul}}" class="img-responsive"> 
+    <br>
+		<br>
+    <table>
+
+        <td>Nama</td>
+        <td>:&nbsp {{product.judul}}</td>
+      <tr>
+        <td>Deskripsi &nbsp</td>
+        <td>:&nbsp {{product.deskripsi}}</td>
+      </tr>
+      <tr>
+        <td>Harga</td>
+        <td>:&nbsp ${{product.harga}}</td>
+      </tr>
+      <tr>
+        <td>Tawaran Tertinggi</td>
+        <td>:&nbsp ${{product.hasil}}</td>
+      </tr>
+    </table>
+		<hr>
+
+		<!-- button to bid -->
+
+    {{#if ass}}
+		<form action="/bidding/{{product._id}}" method="post">
+          <div class="form-row">
+              <label>Lelang</label> <br>
+              <input type="number" name="lelang" min='0' oninput="validity.valid||(value='');" class="form-group">
+          <button class="btn btn-success">Bid</button>
+        </form>
+
+	<br><br><br>
+
+	<!-- showing info about best bidder with the amount-->
+	<ul class="list-group">
+    	{{#each bidding}}
+    		{{#with this.user}}
+
+    		<li class="list-group-item">{{nama}} :
+    		{{/with}}
+    		$ {{this.lelang}}</li>
+    	{{/each}} 
+	</ul> 
+
+	<br><br><br>
+	<!-- showing discussion-->
+	    <form action="/add-comment/{{product._id}}" method="post">
+          <div class="form-row">
+              <label>Comment</label> <br>
+              <input type="text" name="komen" class="form-group">
+          <button class="btn btn-success">Comment</button>
+        </form>
+	<ul class="list-group">
+    	{{#each diskusi}}
+    		
+    		<li class="list-group-item">
+          <div style="color: red">
+          {{moment this.created_at format="dddd,YYYY-MM-DD HH:mm"}}
+          </div>
+    		  {{#with this.user}} 
+    			   {{nama}} :
+    		  {{/with}}
+    		
+    		{{this.comment}}
+    		</li>
+    	{{/each}} 
+	</ul>
+  {{else}}
+    
+    Anda Harus Upload KTP untuk bisa Berdiskusi dan melelang <br>
+    Untuk verifikasi KTP klik <a href="../user/uploadfile">disini</a>
+  {{/if}}
+  </div>
+
+</div>
+<br><br><br>

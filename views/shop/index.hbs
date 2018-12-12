@@ -1,31 +1,40 @@
+    <div id="success" class="alert alert-success " {{#if noMessages}}hidden{{/if}}>
+      {{successMsg}}
+    </div>
+    <div class="jumbotron" style="text-align: center;" >
+     <center> <img src="images/icon.png" class="img-responsive"> </center> 
+    </div>
 
-<div class="jumbotron" style="text-align: center;" >
-  <h1>Lelang Online</h1>
-  <img src="images/lelo.png" style="width: 200px;">
-  <p>Dimana tempat Lelang menjadi lebih mudah dan kompetitif</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+<div class="row">
+  
+  <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+
+
+  </div>
+
 </div>
 
-  <h2 style="text-align:center">Barang Rekomendasi</h2>
 
+  <h2 style="text-align:center">Barang Rekomendasi</h2>
 {{# each barangs}}
   <div class="row">
     {{# each this}}
-  <div class="col-sm-6 col-md-4">
+    <a href="/detailproduk/{{this._id}}">
+  <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
-      <img src="{{this.imagePath}}" alt="..." class="img-responsive">
+      <img src="{{this.imagePath}}" alt="{{this.judul}}" class="img-responsive" style=" height : 100px">
       <div class="caption">
         <h3>{{this.judul}}</h3>
         <p class="description">{{this.deskripsi}}</p>
         <p>
-          <div class="clearfix">
-            <div class="harga pull-left" style="align:center;">$ {{this.harga}}</div>
-            <a href="/add-to-cart/{{this._id}}" class="btn btn-success pull-right" role="button">Lelang</a></p>
+            <div class="harga pull-left" style="align:center;">Harga : $ {{this.harga}}</div></p>  <br>
+            <p><div class="harga pull-left" style="align:center;">Tertinggi : $ {{this.hasil}}</div>
+              <br>
           </div>
-          
-      </div>
+        </p>
     </div>
   </div>
+  </a>
   {{/each}}
   </div>
 {{/each}}

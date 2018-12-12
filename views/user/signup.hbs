@@ -8,7 +8,11 @@
 				{{/each}}
 			</div>
 		{{/if}}
-		<form action="/user/signup" method="POST">
+		<form action="/user/signup" method="POST" >
+			<div class="form-group">
+				<label for="nama">Nama</label>
+				<input type="text" name="nama" id="nama" class="form-control">
+			</div>
 			<div class="form-group">
 				<label for="email">E-mail</label>
 				<input type="text" name="email" id="email" class="form-control">
@@ -16,6 +20,14 @@
 			<div class="form-group">
 				<label for="password">Password</label>
 				<input type="password" name="password" class="form-control">
+			</div>
+			<div class="form-group">
+			<div class="radio">
+			  <label><input type="radio" name="option" value="1" checked>Pelelang</label>
+			</div>
+			<div class="radio">
+			  <label><input type="radio" name="option" value="2">Pemilik Barang</label>
+			</div>
 			</div>
 			<input type="hidden" name="_csrf" value="{{csrfToken}}">
 			<button type="submit" class="btn btn-primary">Sign Up</button>

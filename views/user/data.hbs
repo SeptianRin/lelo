@@ -1,1 +1,71 @@
-data.hbs
+{{#if ass}}
+<div class="row list">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>User Profile</h1>
+		<hr>
+		{{msg}}
+		<img src="{{wado.ktpurl}}" style="width:200px;"> 
+			    <br><br>
+			    <strong>
+			    <table>
+			        <td>Nama</td>
+			        <td>:&nbsp {{wado.nama}}</td>
+			      <tr>
+			        <td>Email &nbsp</td>
+			        <td>:&nbsp {{wado.email}}</td>
+		  	      </tr>
+			    </table>
+			    </strong>
+		<br>
+
+		{{#if pemilik}}
+		<h2>Barang Saya</h2>
+		<a href="../barangsaya/" class="btn btn-primary">Barang Saya</a>
+		{{/if}}
+
+		<h3>Barang yang saya menangkan</h3>
+
+			{{#if produk}}
+			  	
+			  	{{#each produk}}
+			    <ul class="list-group">
+			    	
+					  <li class="list-group-item">
+					    
+					    <div class="col-md-4">Nama Barang:{{this.judul}}</div>
+					     <div class="col-md-4">Harga Lelang: ${{this.hasil}}</div>					    <span style="align:right;"><a href="../add-to-cart/{{this.id}}" class="btn btn-success">Beli</a></span>
+					  </li>
+			    	
+				
+				</ul>
+				{{/each}}
+			{{/if}}
+
+		<h3>Pesanan Saya</h3>
+		{{#each orders}}
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <ul class="list-group">
+			    	{{#each this.items}}
+					  <li class="list-group-item">
+					    <span class="badge">{{this.item.hasil}}</span>
+					    {{this.item.judul}} 
+					    <div>Kode Pengiriman: {{this.item._id}}</div>
+					  </li>
+			    	{{/each}}
+				
+				</ul>
+			  </div>
+			  <div class="panel-footer"><strong>Total Price : ${{this.cart.totalPrice}}</strong></div>
+			</div>
+		{{/each}}
+
+	</div>
+
+</div>
+
+{{else}}
+
+Harap Upload KTP untuk mengubah fitur <a href="upload ktp">disini</a> 
+
+{{/if}}

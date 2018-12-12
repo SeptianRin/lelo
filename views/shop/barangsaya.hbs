@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>Barang saya</h1>
+		<hr>
+		<a href="../tambahbarang/" class="btn btn-success">Tambah Barang</a>
+		<h2>List Barangku</h2>
+		{{#if barang}}
+		
+			<div class="panel panel-default">
+	
+			    <ul class="list-group">
+			    	{{#each barang}}
+					  <li class="list-group-item">
+					    <div class="row">
+
+					    <a class= "col-md-4" style="margin:10px" href="/detailproduk/{{this._id}}">{{this.judul}}</a>
+					    <div class="col-md-3" style="margin:10px" >Harga Awal : ${{this.harga}} </div> 
+					    <a class = "col-md-2"href="../edit-barang/{{this._id}}"><span class="btn btn-primary">Edit Barang</span></a>
+					    <a class = "col-md-2"href="../hapus-barang/{{this._id}}"><span class="btn btn-danger">Hapus Barang</span></a> <br> <br>
+					    <a class = "col-md-2"href="../selesai/{{this._id}}"><span class="btn btn-success">Sudahi Lelang</span></a>
+
+
+					  </li>				
+					{{/each}}
+				</ul>
+			  <!--<div class="panel-footer"><strong>Total Price : ${{this.cart.totalPrice}}</strong></div> -->
+			</div>
+
+		{{else}}
+		<p><strong>Anda Belum memiliki barang , ayo segera lelangkan barang anda dengan mengklik tombol tambah barang atau <a href="../tambahbarang/">disini</a></strong></p>
+		{{/if}}
+	</div>
+</div>

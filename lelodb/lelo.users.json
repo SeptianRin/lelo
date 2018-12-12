@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5c0572f194f6bd0520427702"},"nama":"Tong","email":"tong@tong.tong","password":"$2a$05$H1XWQ245lzgzu3HL.LZd.eid/KJ95.zf4iHt9I.Gwawg9D9TYQ3zu","ktpurl":"tongtong","authcontrol":"2","__v":0}
+{"_id":{"$oid":"5c05730e94f6bd0520427703"},"nama":"Teng","email":"teng@teng.teng","password":"$2a$05$aMdoVMXBcIjf9rCNKbPyBuvhswTfAozGcsgT3sN7N4bGFs8TcFOAW","ktpurl":"tengteng","authcontrol":"1","__v":0}
+{"_id":{"$oid":"5c05735694f6bd0520427704"},"nama":"Indielabs Media","authcontrol":"1","googleId":"110545443680659769886","__v":0}
+{"_id":{"$oid":"5c05744979d9cd202014cb1f"},"nama":"Indielabs Media","authcontrol":"1","googleId":"110545443680659769886","email":"indielabsmedia@gmail.com","__v":0}
+{"_id":{"$oid":"5c074325affcae31e427274c"},"nama":"septian","email":"test@test.com","password":"$2a$05$NlCKvxs.MYWlfjYDBJPNzeqLN8dvVuXzSk6tHT8.TzumAdily7weS","authcontrol":"2","__v":0,"ktpurl":"../images/uploads/urlktp-1543985136524.jpg"}
+{"_id":{"$oid":"5c074ce80fdcb81438524945"},"nama":"wado","email":"wado@wado.wado","password":"$2a$05$jidrFwEo5o/B5RBfncsiI.kjfvsHxJJEHDxHl3FrVn7gJg.Umi/he","authcontrol":"1","__v":0}
+{"_id":{"$oid":"5c074fe30b872229589ee008"},"ktpurl":"../images/uploads/urlktp-1543984804682.png","nama":"a","email":"a@a.com","password":"$2a$05$Vm5gk0pskavvUkl8djn4GupuTZtS5zZNQUrBqhIqmYAFOh.mf9vxm","authcontrol":"2","__v":0}
+{"_id":{"$oid":"5c075d917d993111c8639927"},"ktpurl":"0","nama":"sept","email":"sept@sept.sept","password":"$2a$05$/q1chMA6tpHDviHJtjvLp.vjYms6S1LIj5Cjo9UKb.emQbG5/KlW6","authcontrol":"1","__v":0}
+{"_id":{"$oid":"5c075e337d993111c8639928"},"ktpurl":"0","nama":"J-Chan Channel","authcontrol":"1","googleId":"115645665512707694612","email":"jchanchannel@gmail.com","__v":0}
+{"_id":{"$oid":"5c08ddbce6e9232e08db2721"},"ktpurl":"../images/uploads/urlktp-1544085136639.jpg","nama":"helo","email":"helo@helo.com","password":"$2a$05$0.eHJd8YMyI1DZZnp6vqNOvjj72SQNt3O5/q44XJJ6DC8210rasNu","authcontrol":"1","__v":0}
