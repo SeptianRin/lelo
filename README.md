@@ -9,9 +9,6 @@ Technology used here <br />
 -NodeJS <br />
 -MongoDB <br />
 -Draw.io (For XML Diagram Design)<br />
-<br />
-<br />
-2.Feature<br />
 -ExpressJS (NodeJS Web Framework)<br />
 -Handlesbars (Formattiong for echoing JSON from router) <br />
 -Csurf (adding CSRF to user signin)<br />
